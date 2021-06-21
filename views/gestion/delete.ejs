@@ -1,0 +1,66 @@
+<!--header-->
+    <%- include('../partials/header') -%>
+<!--end header-->
+
+<!-- Toolbar -->
+    <%- include('../partials/topbar') -%>
+<!-- END Toolbar -->
+
+
+<!-- Main container -->
+<main class="main-container">
+    <header class="header header-inverse">
+        <div class="container">
+            <div class="header-info">
+                <div class="left">
+                    <br>
+                    <h2 class="header-title"><strong>Delete <%= item.name %></strong>
+                </div>
+            </div>
+        </div>
+    </header><!--/.header -->
+
+
+    <!--    Body of insert-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm card align-items-center">
+                <form method="post">
+                    <h4 class="alert-warning">Voulez-vous vraiment supprimer <%= item.name %>?</h4>
+                    <div class="form-group text-center">
+                        <br>
+                        <button name="submit" type="submit" class="btn btn-label btn-success"><label><i class="ti-check"></i></label> Yes</button>
+                        <a  class="btn btn-label btn-danger" href="/items"><label><i class="ti-close"></i></label> No</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-md-6">-->
+<!--                    <p class="text-center text-sm-left">Designed using <a href="http://thetheme.io/theadmin"><strong>TheAdmin</strong></a></p>-->
+<!--                </div>-->
+
+                <div class="col-md-6">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+</main>
+
+<%- include('../partials/footer') -%>

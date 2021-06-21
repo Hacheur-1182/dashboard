@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
+    <meta name="keywords" content="login, signin">
+
+    <title>Signin</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/stylesheets/core.min.css" rel="stylesheet">
+    <link href="/stylesheets/app.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="row min-h-fullscreen center-vh p-20 m-0">
+    <div class="col-12">
+        <div class="card card-shadowed px-50 py-30 w-400px mx-auto" style="max-width: 100%">
+            <h5 class="text-uppercase">Sign in</h5>
+            <br>
+            <% if (message.length > 0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= message %>
+                </div>
+            <%}%>
+            <form class="form-type-material" method="post" action="/">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password">
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="form-group flexbox flex-column flex-md-row">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <label class="custom-control-label">Remember me</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-bold btn-block btn-primary" type="submit">Sign in</button>
+                </div>
+            </form>
+        </div>
+        <p class="text-center text-muted fs-13 mt-20">Don't have an account? <a class="text-primary fw-500" href="/signup">Sign up</a></p>
+    </div>
+
+
+    <footer class="col-12 align-self-end text-center fs-13">
+        <p class="mb-0"><small>Copyright © 2019 <a href="http://inchtechs">Inchtechs</a>. All rights reserved.</small></p>
+    </footer>
+</div>
+
+
+
+
+<!-- Scripts -->
+<script src="/javascripts/core.min.js"></script>
+<script src="/javascripts/app.min.js"></script>
+<script src="/javascripts/script.js"></script>
+
+</body>
+</html>

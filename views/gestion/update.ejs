@@ -1,0 +1,120 @@
+<!--header-->
+<%- include('../partials/header') -%>
+<!--end header-->
+
+
+<!-- Toolbar -->
+<%- include('../partials/topbar') -%>
+<!-- END Toolbar -->
+
+
+<!-- Main container -->
+<main class="main-container">
+
+
+    <header class="header header-inverse">
+        <div class="container">
+            <div class="header-info">
+                <div class="left">
+                    <br>
+                    <h2 class="header-title"><strong>Update <%= item.name %></strong></h2>
+                </div>
+            </div>
+        </div>
+    </header><!--/.header -->
+
+
+    <!--    Body of insert-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm card">
+                <br>
+                <form method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input id="name" name="name" class="form-control" type="text"  placeholder="Nom" required>
+                            <span class="alert-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input id="description" name="description" class="form-control" type="text" placeholder="Description" required>
+                            <span class="alert-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Prix</label>
+                            <input id="price" name="price" class="form-control" type="number" placeholder="prix" required>
+                            <span class="alert-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="categories">Categories</label>
+                            <select id="category" class="form-control" name="category" required>
+                                <option value="">Choose category</option>
+                                <option value="Menu">Menu</option>
+                                <option value="Dessert">Dessert</option>
+                                <option value="Drinks">Drinks</option>
+                                <option value="Breakfast">Breakfast</option>
+                            </select>
+                            <span class="alert-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <p></p>
+                        </div>
+                        <div class="input-group file-group">
+                            <input id="image" type="text" class="form-control file-value" placeholder="Choose pictures..." readonly>
+                            <input type="file" multiple id="image" name="image" required>
+                            <span class="input-group-append">
+                            <button class="btn btn-light file-browser" type="button"><i class="fa fa-upload"></i></button>
+                        </span>
+                            <span class="alert-danger"></span>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <a class="btn btn-label btn-outline-light" href="/items"><label><i class="ti-arrow-left"></i></label> Retour</a>
+                            <button name="submit" type="submit" class="btn btn-label btn-primary-outline"><label><i class="ti-pencil"></i></label> Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+            <div class="col-sm card">
+                <br>
+                <br>
+                <img src="<%= item.image %>" alt="...">
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-md-6">-->
+<!--                    <p class="text-center text-sm-left">Designed using <a href="http://Inchtechs.com"><strong>Inchtechs</strong></a></p>-->
+<!--                </div>-->
+                <div class="col-md-6">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+</main>
+
+
+<!-- Footer -->
+<%- include('../partials/footer') -%>
+<!-- Footer -->

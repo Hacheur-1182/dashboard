@@ -1,0 +1,133 @@
+<!--header-->
+<%- include('./partials/header') -%>
+<!--end header-->
+
+<!-- Toolbar -->
+<%- include('./partials/topbar') -%>
+<!-- END Toolbar -->
+
+
+<!-- Main container -->
+<main class="main-container">
+    <header class="header header-inverse">
+        <div class="container">
+            <div class="header-info">
+                <div class="left">
+                    <br>
+                    <h2 class="header-title"><strong>Dashboard</strong></h2>
+                </div>
+                <div class="right flex-middle d-none d-md-block">
+                    <form class="lookup lookup-circle lookup-lg lookup-right" target="index.html">
+                        <input type="text" name="s">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header><!--/.header -->
+
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <div class="card shadow-1">
+                                <div class="card-body">
+                                <div class="flexbox">
+                                <h5>Table ° </h5>
+                                <div class="dropdown">
+                                    <span class="dropdown-toggle no-caret" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></span>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#"><i class="ion-android-list"></i> Details</a>
+                                        <a class="dropdown-item" href="#"><i class="ion-android-add"></i> Add new</a>
+                                        <a class="dropdown-item" href="#"><i class="ion-android-refresh"></i> Refresh</a>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="text-left my-2">
+    <!--                                <div class="fs-60 fw-400 text-info">34</div>-->
+    <!--                                <span class="fw-400 text-muted">Total</span>-->
+                                    <ul>
+                                        <li>nom : </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                                <div class="card-body bg-lighter fw-400 py-12">
+                                    <span class="text-muted mr-1">Montant: </span>
+                                    <span class="text-dark">16 FCFA</span>
+                                </div>
+
+                                <div class="progress mb-0">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%; height: 3px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="col-12 h-50px"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center text-sm-left">Designed using <a href="http://thetheme.io/theadmin"><strong>TheAdmin</strong></a></p>
+                </div>
+
+                <div class="col-md-6">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- END Footer -->
+
+
+</main>
+
+
+
+
+
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!-- Quickviews -->
+
+
+<!-- Notifications -->
+<div id="qv-notifications" class="quickview">
+    <header class="quickview-header quickview-header-lg">
+        <h5 class="quickview-title">Notifications</h5>
+        <span class="close"><i class="ti-close"></i></span>
+    </header>
+
+    <div class="quickview-body">
+        <div class="media-list media-list-hover media-list-divided media-sm">
+
+            <a class="media media-new" href="#">
+                <span class="avatar bg-success"><i class="ti-user"></i></span>
+                <div class="media-body">
+                    <p>New user registered</p>
+                    <time datetime="2018-07-14 20:00">Just now</time>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+<!-- Toolbar -->
+<%- include('./partials/footer') -%>
+<!-- END Toolbar -->

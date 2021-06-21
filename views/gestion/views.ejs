@@ -1,0 +1,117 @@
+<!--header-->
+<%- include('../partials/header') -%>
+<!--end header-->
+
+<!-- Toolbar -->
+<%- include('../partials/topbar') -%>
+<!-- END Toolbar -->
+
+
+<!-- Main container -->
+<main class="main-container">
+    <header class="header header-inverse">
+        <div class="container">
+            <div class="header-info">
+                <div class="left">
+                    <br>
+                    <h2 class="header-title"><strong><%= item.name %></strong>
+                </div>
+            </div>
+        </div>
+    </header><!--/.header -->
+
+<!--    body of items-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                        <br>
+                        <h1><strong></strong></h1>
+                        <br>
+                        <form>
+                            <div class="form-group">
+                                <label>Nom : <%= item.name %></label>
+                            </div>
+                            <div class="form-group">
+                                <label>Prix : <%= item.price %> FCFA</label>
+                            </div>
+                            <div class="form-group">
+                                <label>Categorie : <%= item.category %></label>
+                            </div>
+                            <div class="form-group">
+                                <label>Description : <%= item.description %></label>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="form-group">
+                            <br>
+                            <a href="/items" class="btn btn-outline-light"><i class="ti-arrow-left"></i></a>
+                        </div>
+                    </div>
+                <div class="col-sm-6">
+                    <img src="<%= item.image %>" alt="...">
+                </div>
+            </div>
+        </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-md-6">-->
+<!--                    <p class="text-center text-sm-left">Designed using <a href="http://thetheme.io/theadmin"><strong>TheAdmin</strong></a></p>-->
+<!--                </div>-->
+
+                <div class="col-md-6">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+</main>
+
+
+<!-- Notifications -->
+<div id="qv-notifications" class="quickview">
+    <header class="quickview-header quickview-header-lg">
+        <h5 class="quickview-title">Notifications</h5>
+        <span class="close"><i class="ti-close"></i></span>
+    </header>
+
+    <div class="quickview-body">
+        <div class="media-list media-list-hover media-list-divided media-sm">
+            <a class="media media-new" href="#">
+                <span class="avatar bg-success"><i class="ti-user"></i></span>
+                <div class="media-body">
+                    <p>New user registered</p>
+                    <time datetime="2018-07-14 20:00">Just now</time>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="quickview-footer flexbox">
+        <div>
+            <a href="#">View full archive</a>
+        </div>
+        <div>
+            <a href="#" data-provide="tooltip" title="Mark all as read"><i class="fa fa-circle-o"></i></a>
+            <a href="#" data-provide="tooltip" title="Update"><i class="fa fa-repeat"></i></a>
+            <a href="#" data-provide="tooltip" title="Settings"><i class="fa fa-gear"></i></a>
+        </div>
+    </footer>
+</div>
+
+<!-- Footer -->
+<%- include('../partials/footer') -%>
+<!-- Footer -->

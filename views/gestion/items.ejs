@@ -1,0 +1,125 @@
+<!--header-->
+    <%- include('../partials/header') -%>
+<!--end header-->
+
+<!-- Toolbar -->
+    <%- include('../partials/topbar') -%>
+<!-- END Toolbar -->
+
+
+<!-- Main container -->
+<main class="main-container bg-secondary">
+    <header class="header header-inverse">
+        <div class="container">
+            <div class="header-info">
+                <div class="left">
+                    <br>
+                    <h2 class="header-title"><strong>Items</strong></h2>
+                </div>
+                <div class="right flex-middle d-none d-md-block">
+                    <form class="lookup lookup-circle lookup-lg lookup-right" target="/dashboard">
+                        <input type="text" name="s">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header><!--/.header -->
+
+    <!--  after the header-->
+    <div class="card">
+        <h2 class="card-title">Listes des<strong> Items </strong>
+            <a style="text-decoration: none;" href="/insert" class="btn btn-float btn-light"><i class="ti-plus"></i></a>
+        </h2>
+        <div class="card-body">
+            <br>
+            <table class="table table-striped table-bordered" cellspacing="0" data-provide="datatables">
+                <thead>
+                <tr class="bg-gray">
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Categories</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                <tbody>
+
+            <%items.forEach((items) => {%>
+                    <tr class="bg-lighter">
+                        <td><%= items.name %></td>
+                        <td><%= items.description %></td>
+                        <td><%= items.price %></td>
+                        <td><%= items.category %></td>
+                        <td style="width:400px"  >
+                            <a  href="/views/<%= items._id %>" class="btn btn-label btn-light"><label><i class="ti-eye"></i></label> Voir</a>
+                            <a  href="/update/<%= items._id %>" class="btn btn-label btn-success"><label><i class="ti-pencil"></i></label> Modifier</a>
+                            <a  href="/delete/<%= items._id %>" class="btn btn-label btn-danger"><label><i class="ti-close"></i></label> Supprimer</a>
+                        </td>
+                    <%})%>
+
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <!--/after header-->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-md-6">-->
+<!--                    <p class="text-center text-sm-left">Designed using <a href="http://inchtechs.com"><strong>Inchtechs</strong></a></p>-->
+<!--                </div>-->
+
+                <div class="col-md-6">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- END Footer -->
+
+</main>
+
+<!-- Notifications -->
+<div id="qv-notifications" class="quickview">
+    <header class="quickview-header quickview-header-lg">
+        <h5 class="quickview-title">Notifications</h5>
+        <span class="close"><i class="ti-close"></i></span>
+    </header>
+
+    <div class="quickview-body">
+        <div class="media-list media-list-hover media-list-divided media-sm">
+            <a class="media media-new" href="#">
+                <span class="avatar bg-success"><i class="ti-user"></i></span>
+                <div class="media-body">
+                    <p>New user registered</p>
+                    <time datetime="2018-07-14 20:00">Just now</time>
+                </div>
+            </a>
+
+
+            <a class="media" href="#">
+                <span class="avatar bg-success"><i class="ti-user"></i></span>
+                <div class="media-body">
+                    <p>New user registered</p>
+                    <time datetime="2018-07-14 20:00">1 hour ago</time>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') -%>
+
